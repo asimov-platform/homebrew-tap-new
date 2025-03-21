@@ -17,6 +17,6 @@ class AsimovCli < Formula
   end
 
   test do
-    system bin/"asimov-cli", "--version"
+    system bin/"asimov", "--version"
   end
 end
