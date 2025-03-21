@@ -4,6 +4,7 @@ class AsimovCli < Formula
   url "https://github.com/imunproductive/asimov-cli/archive/refs/tags/25.0.0-dev.13.tar.gz"
   sha256 "87ad24988c4b3cb1913d9dcbb41c809975fcf15249fd1379a30b4c6fce9dfb05"
   license "Unlicense"
+  head "https://github.com/asimov-platform/asimov-cli.git", branch: "master"
 
   livecheck do
     url :stable
