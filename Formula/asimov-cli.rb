@@ -60,6 +60,9 @@ class AsimovCli < Formula
       r.stage do
         source_file = File.basename(r.url).chomp(".gz")
 
+        ohai "Extracting #{source_file}"
+        ohai Dir.entries(".")
+
         # chmod 0755, source_file
 
         libexec.install source_file => r.name
