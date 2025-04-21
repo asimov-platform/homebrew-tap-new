@@ -72,7 +72,8 @@ class AsimovCli < Formula
 
     # Test that all resources exist
     resources.each do |r|
-      assert_path_exists libexec/r.name
+      name = Pathname(r.name.chomp(".gz"))
+      assert_path_exists libexec/name
     end
   end
 end
