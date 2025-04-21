@@ -22,14 +22,14 @@ class AsimovCli < Formula
 
   on_macos do
     on_arm do
-      resource "asimov-test-cli" do
+      resource "asimov" do
         url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-macos-arm.gz"
         sha256 "e67ec61334647909fa1d405498ca42a6e7a9a96471a435ec5bbb7dc784c08ce4"
       end
     end
 
     on_intel do
-      resource "asimov-test-cli" do
+      resource "asimov" do
         url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-macos-x86.gz"
         sha256 "eaaa532d63de98905367816b5ec6fad87815d2911d6d57bf7ddeec446f36bec5"
       end
@@ -38,14 +38,14 @@ class AsimovCli < Formula
 
   on_linux do
     on_arm do
-      resource "asimov-test-cli" do
+      resource "asimov" do
         url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-linux-arm-gnu.gz"
         sha256 "ef21144725eeccd0618357f0bb4936d1653a8968bfa8b530fa2490685470dc33"
       end
     end
 
     on_intel do
-      resource "asimov-test-cli" do
+      resource "asimov" do
         url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-linux-x86-gnu.gz"
         sha256 "6b6e54fd490e036d864158de7d4b19a248aaf64c926ff9d3daa9db0f463d6f9c"
       end
@@ -58,14 +58,8 @@ class AsimovCli < Formula
     # Process each resource
     resources.each do |r|
       r.stage do
-        source_file = File.basename(r.url).chomp(".gz")
-
-        ohai "Extracting #{source_file}"
-        ohai Dir.entries(".")
-
-        # chmod 0755, source_file
-
-        libexec.install source_file => r.name
+        # chmod 0755, r.name
+        libexec.install r.name
       end
     end
   end
