@@ -55,10 +55,6 @@ class AsimovCli < Formula
   def install
     system "cargo", "install", *std_cargo_args
     
-    # Create libexec directory
-    libexec = libexec/"libexec"
-    libexec.mkpath
-    
     # Process each resource
     resources.each do |r|
       r.stage do
@@ -76,7 +72,7 @@ class AsimovCli < Formula
     
     # Test that all resources exist
     resources.each do |r|
-      assert_predicate libexec/"libexec"/r.name, :exist?
+      assert_path_exists libexec/r.name
     end
   end
 end
