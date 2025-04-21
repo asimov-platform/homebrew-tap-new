@@ -58,10 +58,11 @@ class AsimovCli < Formula
     # Process each resource
     resources.each do |r|
       r.stage do
-        # source_file = File.basename(r.url).chomp(".gz")
+        source_file = File.basename(r.url).chomp(".gz")
+
         # chmod 0755, source_file
 
-        libexec.install target_file => r.name
+        libexec.install source_file => r.name
       end
     end
   end
