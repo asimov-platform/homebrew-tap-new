@@ -59,10 +59,11 @@ class AsimovCli < Formula
     resources.each do |r|
       r.stage do
         source_file = File.basename(r.url)
-        target_file = r.name
+        target_file = libexec/r.name
 
-        system "gunzip", "-c", source_file, ">", libexec/target_file
-        chmod 0755, libexec/target_file
+        cp source_file, target_file
+        system "gunzip", target_file
+        chmod 0755, target_file.chomp(".gz")
       end
     end
   end
