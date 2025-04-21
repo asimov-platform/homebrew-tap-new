@@ -54,13 +54,13 @@ class AsimovCli < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
-    
+
     # Process each resource
     resources.each do |r|
       r.stage do
         source_file = File.basename(r.url)
         target_file = r.name
-        
+
         system "gunzip", "-c", source_file, ">", libexec/target_file
         chmod 0755, libexec/target_file
       end
@@ -69,7 +69,7 @@ class AsimovCli < Formula
 
   test do
     system bin/"asimov", "--version"
-    
+
     # Test that all resources exist
     resources.each do |r|
       assert_path_exists libexec/r.name
