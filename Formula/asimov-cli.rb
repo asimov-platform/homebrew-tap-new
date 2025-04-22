@@ -22,32 +22,32 @@ class AsimovCli < Formula
 
   on_macos do
     on_arm do
-      resource "asimov" do
-        url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-macos-arm.gz"
-        sha256 "e67ec61334647909fa1d405498ca42a6e7a9a96471a435ec5bbb7dc784c08ce4"
+      resource "asimov-repository-cli" do
+        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-macos-arm.gz"
+        sha256 "64941269d9bcd8a19c2b00877da71e252ddf9f05a7ccdcfc3fa79eb02b9b4ce0"
       end
     end
 
     on_intel do
-      resource "asimov" do
-        url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-macos-x86.gz"
-        sha256 "eaaa532d63de98905367816b5ec6fad87815d2911d6d57bf7ddeec446f36bec5"
+      resource "asimov-repository-cli" do
+        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-macos-x86.gz"
+        sha256 "501c312b5bfce96bba454591e3fcae3735d2dcc743bfdfbd11896fc517c97f21"
       end
     end
   end
 
   on_linux do
     on_arm do
-      resource "asimov" do
-        url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-linux-arm-gnu.gz"
-        sha256 "ef21144725eeccd0618357f0bb4936d1653a8968bfa8b530fa2490685470dc33"
+      resource "asimov-repository-cli" do
+        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-linux-arm-gnu.gz"
+        sha256 "dc553524084f5d1f4016dcaaeee5e6e637a7beea4456d1a320d07837649dd133"
       end
     end
 
     on_intel do
-      resource "asimov" do
-        url "https://github.com/asimov-platform/asimov-cli/releases/download/25.0.0-dev.4/asimov-linux-x86-gnu.gz"
-        sha256 "6b6e54fd490e036d864158de7d4b19a248aaf64c926ff9d3daa9db0f463d6f9c"
+      resource "asimov-repository-cli" do
+        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-linux-x86-gnu.gz"
+        sha256 "cf0e9a64019060dced69553f2805772377299000092bd97ed32b7b6c6d924a8d"
       end
     end
   end
