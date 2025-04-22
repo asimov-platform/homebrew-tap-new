@@ -22,33 +22,49 @@ class AsimovCli < Formula
 
   on_macos do
     on_arm do
-      resource "asimov-repository-cli" do
-        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-macos-arm.gz"
-        sha256 "64941269d9bcd8a19c2b00877da71e252ddf9f05a7ccdcfc3fa79eb02b9b4ce0"
+      resource "asimov-dataset-cli" do
+        url "https://github.com/asimov-platform/asimov-dataset-cli/releases/tag/25.0.0-dev.5/asimov-macos-arm.gz"
+        sha256 "cf4f4b1058db1f5238df985b3958e596c6eea84c3f92f0d8f0f5a489174eefbf"
       end
+      # resource "asimov-repository-cli" do
+      #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-macos-arm.gz"
+      #   sha256 "64941269d9bcd8a19c2b00877da71e252ddf9f05a7ccdcfc3fa79eb02b9b4ce0"
+      # end
     end
 
     on_intel do
-      resource "asimov-repository-cli" do
-        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-macos-x86.gz"
-        sha256 "501c312b5bfce96bba454591e3fcae3735d2dcc743bfdfbd11896fc517c97f21"
+      resource "asimov-dataset-cli" do
+        url "https://github.com/asimov-platform/asimov-dataset-cli/releases/tag/25.0.0-dev.5/asimov-macos-x86.gz"
+        sha256 "ea11d213dc01c99171e456de94958acc37abe84992b1c234b48e75a85ad6497d"
       end
+      # resource "asimov-repository-cli" do
+      #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-macos-x86.gz"
+      #   sha256 "501c312b5bfce96bba454591e3fcae3735d2dcc743bfdfbd11896fc517c97f21"
+      # end
     end
   end
 
   on_linux do
     on_arm do
-      resource "asimov-repository-cli" do
-        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-linux-arm-gnu.gz"
-        sha256 "dc553524084f5d1f4016dcaaeee5e6e637a7beea4456d1a320d07837649dd133"
+      resource "asimov-dataset-cli" do
+        url "https://github.com/asimov-platform/asimov-dataset-cli/releases/tag/25.0.0-dev.5/asimov-linux-arm-gnu.gz"
+        sha256 "83deb2d62df03a24e5f3965a9a137efe423714c9d852763f6223ff4dc96d33c0"
       end
+      # resource "asimov-repository-cli" do
+      #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-linux-arm-gnu.gz"
+      #   sha256 "dc553524084f5d1f4016dcaaeee5e6e637a7beea4456d1a320d07837649dd133"
+      # end
     end
 
     on_intel do
-      resource "asimov-repository-cli" do
-        url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-linux-x86-gnu.gz"
-        sha256 "cf0e9a64019060dced69553f2805772377299000092bd97ed32b7b6c6d924a8d"
+      resource "asimov-dataset-cli" do
+        url "https://github.com/asimov-platform/asimov-dataset-cli/releases/tag/25.0.0-dev.5/asimov-linux-x86-gnu.gz"
+        sha256 "abbcf6612278381d079e85b658cced97b47f71652437fa39e6eb8dc2423d6d6d"
       end
+      # resource "asimov-repository-cli" do
+      #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/tag/25.0.0-dev.1/asimov-linux-x86-gnu.gz"
+      #   sha256 "cf0e9a64019060dced69553f2805772377299000092bd97ed32b7b6c6d924a8d"
+      # end
     end
   end
 
