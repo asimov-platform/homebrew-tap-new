@@ -22,7 +22,7 @@ class AsimovCli < Formula
 
   on_macos do
     on_arm do
-      resource "asimov-dataset-cli" do
+      resource "asimov-dataset" do
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-macos-arm.gz"
         sha256 "cf4f4b1058db1f5238df985b3958e596c6eea84c3f92f0d8f0f5a489174eefbf"
       end
@@ -33,7 +33,7 @@ class AsimovCli < Formula
     end
 
     on_intel do
-      resource "asimov-dataset-cli" do
+      resource "asimov-dataset" do
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-macos-x86.gz"
         sha256 "ea11d213dc01c99171e456de94958acc37abe84992b1c234b48e75a85ad6497d"
       end
@@ -46,7 +46,7 @@ class AsimovCli < Formula
 
   on_linux do
     on_arm do
-      resource "asimov-dataset-cli" do
+      resource "asimov-dataset" do
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-linux-arm-gnu.gz"
         sha256 "83deb2d62df03a24e5f3965a9a137efe423714c9d852763f6223ff4dc96d33c0"
       end
@@ -57,7 +57,7 @@ class AsimovCli < Formula
     end
 
     on_intel do
-      resource "asimov-dataset-cli" do
+      resource "asimov-dataset" do
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-linux-x86-gnu.gz"
         sha256 "abbcf6612278381d079e85b658cced97b47f71652437fa39e6eb8dc2423d6d6d"
       end
