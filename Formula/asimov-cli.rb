@@ -26,6 +26,10 @@ class AsimovCli < Formula
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-macos-arm.gz"
         sha256 "cf4f4b1058db1f5238df985b3958e596c6eea84c3f92f0d8f0f5a489174eefbf"
       end
+      resource "asimov-module" do
+        url "https://github.com/asimov-platform/asimov-module-cli/releases/download/25.0.0-dev.2/module-cli-macos-arm.gz"
+        sha256 "39d3c86b017c0b51a263f946f44d398161f44920e3b224e8c718cca3f7cbd57d"
+      end
       # resource "asimov-repository-cli" do
       #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/download/25.0.0-dev.1/asimov-macos-arm.gz"
       #   sha256 "64941269d9bcd8a19c2b00877da71e252ddf9f05a7ccdcfc3fa79eb02b9b4ce0"
@@ -36,6 +40,10 @@ class AsimovCli < Formula
       resource "asimov-dataset" do
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-macos-x86.gz"
         sha256 "ea11d213dc01c99171e456de94958acc37abe84992b1c234b48e75a85ad6497d"
+      end
+      resource "asimov-module" do
+        url "https://github.com/asimov-platform/asimov-module-cli/releases/download/25.0.0-dev.2/module-cli-macos-x86.gz"
+        sha256 "18b26b321279923109b5dc81d7c8cb3cb5db7179a5db6e27601849add9195c37"
       end
       # resource "asimov-repository-cli" do
       #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/download/25.0.0-dev.1/asimov-macos-x86.gz"
@@ -50,6 +58,10 @@ class AsimovCli < Formula
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-linux-arm-gnu.gz"
         sha256 "83deb2d62df03a24e5f3965a9a137efe423714c9d852763f6223ff4dc96d33c0"
       end
+      resource "asimov-module" do
+        url "https://github.com/asimov-platform/asimov-module-cli/releases/download/25.0.0-dev.2/module-cli-linux-arm-gnu.gz"
+        sha256 "b90bc4cda8f648b5d0f7863f141c9a314b4410edf40fd7b0f5a20c4c9aa01b30"
+      end
       # resource "asimov-repository-cli" do
       #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/download/25.0.0-dev.1/asimov-linux-arm-gnu.gz"
       #   sha256 "dc553524084f5d1f4016dcaaeee5e6e637a7beea4456d1a320d07837649dd133"
@@ -60,6 +72,10 @@ class AsimovCli < Formula
       resource "asimov-dataset" do
         url "https://github.com/asimov-platform/asimov-dataset-cli/releases/download/25.0.0-dev.5/asimov-linux-x86-gnu.gz"
         sha256 "abbcf6612278381d079e85b658cced97b47f71652437fa39e6eb8dc2423d6d6d"
+      end
+      resource "asimov-module" do
+        url "https://github.com/asimov-platform/asimov-module-cli/releases/download/25.0.0-dev.2/module-cli-linux-x86-gnu.gz"
+        sha256 "d8cb3ad98499d42ec4f89c6669264935a41b0583f6e3995b7e1382b73b654af6"
       end
       # resource "asimov-repository-cli" do
       #   url "https://github.com/asimov-platform/asimov-repository-cli/releases/download/25.0.0-dev.1/asimov-linux-x86-gnu.gz"
@@ -74,7 +90,7 @@ class AsimovCli < Formula
     # Process each resource
     resources.each do |r|
       r.stage do
-        # chmod 0755, r.name
+        chmod 0755, r.name
         libexec.install r.name
       end
     end
