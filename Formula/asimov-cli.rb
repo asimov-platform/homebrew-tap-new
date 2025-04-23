@@ -91,8 +91,7 @@ class AsimovCli < Formula
     # Process each resource
     resources.each do |r|
       r.stage do
-        chmod 0755, r.name
-        libexec.install r.name
+        bin.install r.name
       end
     end
   end
