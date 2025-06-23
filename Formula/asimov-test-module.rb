@@ -1,4 +1,4 @@
-class AsimovCli < Formula
+class AsimovTestModule < Formula
   desc "Test module"
   homepage "https://github.com/asimov-modules/asimov-test-module"
   url "https://github.com/asimov-modules/asimov-test-module/archive/refs/tags/0.0.2.tar.gz"
