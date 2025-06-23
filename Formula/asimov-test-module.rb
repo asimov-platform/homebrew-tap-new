@@ -3,6 +3,7 @@ class AsimovTestModule < Formula
   homepage "https://github.com/asimov-modules/asimov-test-module"
   url "https://github.com/asimov-modules/asimov-test-module/archive/refs/tags/0.0.2.tar.gz"
   version "0.0.2"
+  sha256 "312b75690127728387e876c03257f803da6ddf1866c3e0b50bf3d473a81e30c5"
   license "Unlicense"
   head "https://github.com/asimov-modules/asimov-test-module.git", branch: "master"
 
