@@ -1,5 +1,5 @@
 class AsimovCli < Formula
-  desc "ASIMOV Test module"
+  desc "Test module"
   homepage "https://github.com/asimov-modules/asimov-test-module"
   url "https://github.com/asimov-modules/asimov-test-module/archive/refs/tags/0.0.2.tar.gz"
   version "0.0.2"
@@ -17,8 +17,8 @@ class AsimovCli < Formula
     system "cargo", "install", *std_cargo_args
   end
 
-  test do
-    # system bin/"asimov-test-emitter", "--version"
-    # system bin/"asimov-test-runner", "--version"
-  end
+  # test do
+  #   system bin/"asimov-test-emitter", "--version"
+  #   system bin/"asimov-test-runner", "--version"
+  # end
 end
